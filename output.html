@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 50%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Directions from origin to destination</h2>
+
+<table>
+{% for key,value in dirdict.items() %}
+  <tr>
+    <td>{{key | safe}}</td>
+    <td>{{value | safe}}</td>
+  </tr>
+{% endfor %}
+</table>
+
+
+<h3>Best Places to eat around the destination</h3>
+
+
+<table>
+    {% for key,value in placedict.items() %}
+      <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+      </tr>
+    {% endfor %}
+</table>
+<form method="POST" action = "/convert">
+
+  <input type="submit" value="Download CSV"/>
+</form>
+
+</body>
+</html>
