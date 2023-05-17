@@ -1,4 +1,4 @@
-# Google Maps API
+# Direction and Restaurant Finder
 With the help of the Googlemaps API and Python Flask, I created an interface that would prompt the user to enter the origin and destination of their commute, and output the directions from the origin to the destination as well as the top rated restaurants in the proximity of the destination. 
 
 First, a flask application is opened where the user sees a webpage and is prompted to enter their current location and their destination. Once the user clicks on 
